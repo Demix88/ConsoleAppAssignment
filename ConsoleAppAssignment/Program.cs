@@ -97,8 +97,8 @@ using System.Collections.Generic;
             if (car == carMake)
             {
                 Console.WriteLine("I have Found: " + car);
+                break;
             }
-            //I can't figure out how to make it to stop searching for values once correct value is put unless I remove the else but then I dont have the response when user puts data not on the list
 
            else
             {
@@ -108,26 +108,49 @@ using System.Collections.Generic;
         Console.ReadLine();
 
 
-        //Ive done the different version of it but still same results
+        string[] cities = { "Riga", "Bejing", "Sidney", "Cairo", "Moscow", "Rome", "Paris", "Rome" };
+        Console.WriteLine("\n---Fifth App---\n Please choose one of the following cities: Riga, Bejing, Sidney, Cairo, Moscow, Rome, Paris ");
+        Console.WriteLine("Please type one of the cities i.e. Cairo");
+        string cityName = Console.ReadLine();
+        for (int k = 0; k < cities.Length; k++)
 
-        //string[] cars = { "Ford", "Honda", "Suzuki", "Seat", "Ferarri", "Lamborghini", "Toyota", "Vauxhall", "BMW", "Mercedes-Benz", "Fiat", "Honda","Tesla" };
+        {
+            if (cities[k] == cityName)
+            {
+                Console.WriteLine("We have found " + cities[k] + " in our records!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("\"" + cityName + "\"" + "does not have a match in our records!");
+            }
 
-        //    Console.WriteLine("Select One of the following  Ford, Honda, Suzuki, Seat, Ferarri, Lamborghini, Toyota, Vauxhall, BMW, Mercedes - Benz, Fiat, Honda ");
-        //Console.WriteLine("Type your car Model i.e Ford");
-        //string carModel = Console.ReadLine();
-        //for (int j = 0; j<cars.Length; j++)
-        //{
-        //    if (cars[j] == carModel)
+        }
+        Console.ReadLine();
 
-        //    {
-        //        Console.WriteLine(carModel+ " was found");
-        //    }
-        //    if (cars[j] != carModel)
-        //    {
-        //        Console.WriteLine(" Sorry "+carModel+" Was not found in the records");
-        //    }
-        //}
-        //Console.ReadLine();
+        List<string> birds = new List<string> { "Swallow", "Stork", "Eagle", "Eagle", "Crow", "Falcon" };
+        Console.WriteLine("\n---Sixth App---\nPlease select one of the following birds: Swallow,Stork,Eagle,Crow,Falcon");
+        string birdName = Console.ReadLine();
+        foreach (string bird in birds)
+        {
+            if (bird == birdName)
+            {
+                Console.WriteLine("We have found " + bird + " in our records");
+                break;
+
+            }
+            else
+            {
+                Console.WriteLine(" We couldn't find " + "\"" + birdName + "\"");
+
+            }
+
+        }
+        Console.ReadLine();
+        Console.WriteLine("---END---");
+
+
+
 
 
 
